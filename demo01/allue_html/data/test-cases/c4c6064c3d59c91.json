@@ -1,0 +1,65 @@
+{
+  "uid" : "c4c6064c3d59c91",
+  "name" : "test_div_int_param[2-1-2]",
+  "fullName" : "demo01.test_div#test_div_int_param",
+  "historyId" : "3a13b6358266f87954827c2da2456f04",
+  "time" : {
+    "start" : 1586592957728,
+    "stop" : 1586592957728,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "level_critial"
+  }, {
+    "name" : "parentSuite",
+    "value" : "demo01"
+  }, {
+    "name" : "suite",
+    "value" : "test_div"
+  }, {
+    "name" : "host",
+    "value" : "ubuntu"
+  }, {
+    "name" : "thread",
+    "value" : "4324-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "demo01.test_div"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expectResult",
+    "value" : "2"
+  }, {
+    "name" : "number1",
+    "value" : "2"
+  }, {
+    "name" : "number2",
+    "value" : "1"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "level_critial" ]
+  },
+  "source" : "c4c6064c3d59c91.json",
+  "parameterValues" : [ "2", "2", "1" ]
+}

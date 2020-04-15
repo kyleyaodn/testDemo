@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="ubuntu" name="pytest" skipped="0" tests="8" time="0.068" timestamp="2020-04-11T16:15:57.699019"><testcase classname="demo01.test_div" file="demo01/test_div.py" line="4" name="test_div_int" time="0.001"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="10" name="test_div_int_param[10-2-5]" time="0.001"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="10" name="test_div_int_param[2-1-2]" time="0.001"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="10" name="test_div_int_param[3-2-1.5]" time="0.002"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="10" name="test_div_int_param[6-4-1.58]" time="0.002"><failure message="assert 1.5 == 1.58
+ +  where 1.5 = div(6, 4)">number1 = 6, number2 = 4, expectResult = 1.58
+
+    @pytest.mark.level_critial
+    @pytest.mark.parametrize(&quot;number1,number2,expectResult&quot;, int_data)
+    def test_div_int_param(number1, number2, expectResult):
+&gt;       assert div(number1, number2) == expectResult
+E       assert 1.5 == 1.58
+E        +  where 1.5 = div(6, 4)
+
+demo01/test_div.py:14: AssertionError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="16" name="test_div_float" time="0.001"><failure message="TypeError: type() takes 1 or 3 arguments">@pytest.mark.level_media
+    def test_div_float():
+        assert type(div(7, 5)) == float
+&gt;       assert type(7,5) == 9
+E       TypeError: type() takes 1 or 3 arguments
+
+demo01/test_div.py:20: TypeError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="23" name="test_div_exception" time="0.002"></testcase><testcase classname="demo01.test_pytest" file="demo01/test_pytest.py" line="6" name="test_answer" time="0.001"></testcase></testsuite></testsuites>

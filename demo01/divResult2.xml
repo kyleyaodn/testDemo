@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="6" hostname="ubuntu" name="pytest" skipped="0" tests="17" time="0.402" timestamp="2020-04-11T20:38:00.874257"><testcase classname="demo01.test_div" file="demo01/test_div.py" line="5" name="test_div_int" time="0.003"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="13" name="test_div_float" time="0.003"><failure message="TypeError: type() takes 1 or 3 arguments">@pytest.mark.level_media
+    def test_div_float():
+        assert type(div(7, 5)) == float
+&gt;       assert type(7, 5) == 1.4
+E       TypeError: type() takes 1 or 3 arguments
+
+demo01/test_div.py:17: TypeError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="20" name="test_div_exception" time="0.003"><failure message="TypeError: unsupported operand type(s) for /: &apos;str&apos; and &apos;int&apos;">@pytest.mark.level_exception
+    def test_div_exception():
+        with pytest.raises(ZeroDivisionError):
+            div(10, 0)
+    
+&gt;       assert div(&apos;100&apos;, 8)
+
+demo01/test_div.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = &apos;100&apos;, b = 8
+
+    def div(a,b):
+&gt;       return a/b
+E       TypeError: unsupported operand type(s) for /: &apos;str&apos; and &apos;int&apos;
+
+demo01/div.py:2: TypeError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="30" name="test_div_int_param[10-2-5]" time="0.004"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="30" name="test_div_int_param[2-1-2]" time="0.004"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="30" name="test_div_int_param[3-2-1.5]" time="0.006"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="30" name="test_div_int_param[6-4-1.58]" time="0.005"><failure message="assert 1.5 == 1.58
+ +  where 1.5 = div(6, 4)">number1 = 6, number2 = 4, expectResult = 1.58
+
+    @pytest.mark.level_critial
+    @pytest.mark.parametrize(&quot;number1,number2,expectResult&quot;, int_data)
+    def test_div_int_param(number1, number2, expectResult):
+&gt;       assert div(number1, number2) == expectResult
+E       assert 1.5 == 1.58
+E        +  where 1.5 = div(6, 4)
+
+demo01/test_div.py:34: AssertionError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="36" name="test_div_float_param[1.0-2.0-0.5]" time="0.005"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="36" name="test_div_float_param[1.2-2-0.6]" time="0.004"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="36" name="test_div_float_param[10001.2-4-2500.3]" time="0.005"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="36" name="test_div_float_param[10-3-3.33]" time="0.005"><failure message="assert 3.3333333333333335 == 3.33
+ +  where 3.3333333333333335 = div(10, 3)">number1 = 10, number2 = 3, expectResult = 3.33
+
+    @pytest.mark.level_critial
+    @pytest.mark.parametrize(&quot;number1,number2,expectResult&quot;, [
+        (1.0, 2.0, 0.5),
+        (1.2, 2, 0.6),
+        (10001.2, 4, 2500.3),
+        (10, 3, 3.33),
+        (-0.8, 0.4, 2)
+    ])
+    def test_div_float_param(number1, number2, expectResult):
+&gt;       assert div(number1, number2) == expectResult
+E       assert 3.3333333333333335 == 3.33
+E        +  where 3.3333333333333335 = div(10, 3)
+
+demo01/test_div.py:46: AssertionError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="36" name="test_div_float_param[-0.8-0.4-2]" time="0.004"><failure message="assert -2.0 == 2
+ +  where -2.0 = div(-0.8, 0.4)">number1 = -0.8, number2 = 0.4, expectResult = 2
+
+    @pytest.mark.level_critial
+    @pytest.mark.parametrize(&quot;number1,number2,expectResult&quot;, [
+        (1.0, 2.0, 0.5),
+        (1.2, 2, 0.6),
+        (10001.2, 4, 2500.3),
+        (10, 3, 3.33),
+        (-0.8, 0.4, 2)
+    ])
+    def test_div_float_param(number1, number2, expectResult):
+&gt;       assert div(number1, number2) == expectResult
+E       assert -2.0 == 2
+E        +  where -2.0 = div(-0.8, 0.4)
+
+demo01/test_div.py:46: AssertionError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="49" name="test_div_exception_param[3-0-ZeroDivisionError]" time="0.005"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="49" name="test_div_exception_param[100-9-TypeError]" time="0.005"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="49" name="test_div_exception_param[99-99-TypeError]" time="0.006"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="49" name="test_div_exception_param[-9-ZeroDivisionError]" time="0.009"><failure message="TypeError: unsupported operand type(s) for /: &apos;str&apos; and &apos;int&apos;">number1 = &apos;&apos;, number2 = 9, exceptResult = &lt;class &apos;ZeroDivisionError&apos;&gt;
+
+    @pytest.mark.level_exception
+    @pytest.mark.parametrize(&quot;number1, number2, exceptResult&quot;, except_data)
+    def test_div_exception_param(number1, number2, exceptResult):
+        with pytest.raises(exceptResult):
+&gt;           div(number1, number2)
+
+demo01/test_div.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = &apos;&apos;, b = 9
+
+    def div(a,b):
+&gt;       return a/b
+E       TypeError: unsupported operand type(s) for /: &apos;str&apos; and &apos;int&apos;
+
+demo01/div.py:2: TypeError</failure></testcase><testcase classname="demo01.test_pytest" file="demo01/test_pytest.py" line="6" name="test_answer" time="0.003"></testcase></testsuite></testsuites>

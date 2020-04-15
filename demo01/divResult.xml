@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="ubuntu" name="pytest" skipped="0" tests="4" time="0.040" timestamp="2020-04-11T11:36:16.552784"><testcase classname="demo01.test_div" file="demo01/test_div.py" line="5" name="test_div_int" time="0.001"></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="10" name="test_div_float" time="0.001"><failure message="assert 0.8888888888888888 == 0.88
+ +  where 0.8888888888888888 = div(8, 9)">def test_div_float():
+        assert type(div(7, 5)) == float
+&gt;       assert div(8, 9) == 0.88
+E       assert 0.8888888888888888 == 0.88
+E        +  where 0.8888888888888888 = div(8, 9)
+
+demo01/test_div.py:13: AssertionError</failure></testcase><testcase classname="demo01.test_div" file="demo01/test_div.py" line="15" name="test_div_exception" time="0.001"></testcase><testcase classname="demo01.test_pytest" file="demo01/test_pytest.py" line="6" name="test_answer" time="0.001"></testcase></testsuite></testsuites>
